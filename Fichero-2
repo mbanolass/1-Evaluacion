@@ -1,5 +1,0 @@
-# Programa de iniciación
-# Te pregunta, respondes y completa con los datos introducidos
-print("¿Cómo te llamas?")
-nombre=input()
-print("Hola "+nombre+" encantado de conocerte")
