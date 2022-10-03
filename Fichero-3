@@ -1,0 +1,5 @@
+#  BUCLES conocemos el numero de repeticiones
+def bucle_1():
+  for cont in range(1,10):
+   num=input("Dime un numero: ")
+bucle_1()
