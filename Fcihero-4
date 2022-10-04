@@ -1,0 +1,8 @@
+# Bucle de tablas de multiplicar
+print("Tabla de: ")
+mult=int(input())
+def bucle_1():
+  for cont in range(1,11):
+    print(int((mult)*cont))
+    
+bucle_1()
