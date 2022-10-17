@@ -1,0 +1,21 @@
+# Pregunta que hora es y te responde en relacion con la hora del dia
+# Buenos dias, Buenas trades, Buenas noches
+print("Que hora es?")
+hora=int(input())
+def saludar():
+    if(hora<=5):
+        print("Buenas noches")
+    else: 
+        if(hora>5 and hora<=13):
+            print ("Buenos dias")
+        else:
+            if (hora>13 and hora<=20):
+                print ("Buenas tardes")
+            else:
+                if (hora>20 and hora<=24):
+                    print("Buenas noches")
+                else:
+                    print("Mentira perrro")
+                
+saludar()
+    
