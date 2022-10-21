@@ -3,11 +3,22 @@
 def sacar_dinero():
     saldo=0
     saldo=int(input("Cuanto deseas ingresar? "))
-    sacar=int(input("¿Quieres extraer dinero? Di 1 para si y 2 para no"))
+    sacar=int(input("¿Quieres extraer dinero? Di 1 para si y 2 para no "))
     if(sacar==1):
-        extraer=(int(input("¿Cuanto deseas extraer? ")))
-        saldo=saldo-extraer
-        print("Tu saldo es de"+str(saldo))
+        while(saldo>0):
+            extraer=(int(input("¿Cuanto deseas extraer? ")))
+            if(extraer%5==0):
+                saldo=saldo-extraer
+                print("Tu saldo es de "+str(saldo))
+            else:
+                print("No disponemos de dichos cambios")
+            sacar=int(input("¿Quieres extraer dinero? Di 1 para si y 2 para no "))
+            if(sacar==2):
+                print("De acuerdo, tu saldo es de "+str(saldo))
+                break
+            else:
+                print("No hay nada asociado a este numero")
+                break
     else:
         if(sacar==2):
             print("De acuerdo, tu saldo es de "+str(saldo))
