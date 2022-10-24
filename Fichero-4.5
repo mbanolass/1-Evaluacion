@@ -7,18 +7,30 @@ def sacar_dinero():
     if(sacar==1):
         while(saldo>0):
             extraer=(int(input("¿Cuanto deseas extraer? ")))
-            if(extraer%5==0):
-                saldo=saldo-extraer
-                print("Tu saldo es de "+str(saldo))
+            if(extraer>saldo):
+                print("No se puede realizar esta accion")
             else:
-                print("No disponemos de dichos cambios")
-            sacar=int(input("¿Quieres extraer dinero? Di 1 para si y 2 para no "))
-            if(sacar==2):
-                print("De acuerdo, tu saldo es de "+str(saldo))
-                break
-            else:
-                print("No hay nada asociado a este numero")
-                break
+                if(extraer%5==0):
+                    saldo=saldo-extraer
+                    print("Tu saldo es de "+str(saldo))
+                else:
+                    print("No disponemos de dichos cambios")
+                    sacar=int(input("¿Quieres extraer dinero? Di 1 para si y 2 para no "))
+                    if(sacar==1):
+                        extraer=(int(input("¿Cuanto deseas extraer? ")))
+                        if(extraer>saldo):
+                            print("No se puede realizar esta accion")
+                        else:
+                            if(extraer%5==0):
+                                saldo=saldo-extraer
+                                print("Tu saldo es de "+str(saldo))
+                    else:
+                        if(sacar==2):
+                            print("De acuerdo, tu saldo es de "+str(saldo))
+                            break
+                        else:
+                            print("No hay nada asociado a este numero")
+                            break
     else:
         if(sacar==2):
             print("De acuerdo, tu saldo es de "+str(saldo))
