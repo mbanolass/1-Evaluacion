@@ -1,0 +1,39 @@
+def menu():
+    print("*******************************************************")
+    print("                       *MENU*                         ")
+    print("*******************************************************")
+    print("Ingresar - 1")
+    print("Extraer - 2")
+    print("Saldo - 3")
+    print("Salir - 4")
+def(ingresar_dinero):
+    ingreso=int(input("Cunato deseas ingresar: "))
+    saldo=saldo+ingreso
+    return(saldo)
+def(extraer_dinero):
+    extraer=int(input("Cuanto deseas extraer "))
+    if(extraer%5==0)&(extraer<saldo):
+        saldo=saldo-extraer
+        return(saldo)
+    else:
+        print("No se puede realizar esta accion")
+def(definir_saldo):
+    return(saldo)
+def(main):
+    seguir=True
+    saldo=0
+    while(seguir==True):
+        menu()
+        respuesta=int(input("Que accion deseas relizar "))
+        if (respuesta==1):
+            ingresar_dinero()
+            seguir=True
+        if (respuesta==2):
+            extraer_dinero()
+            seguir=True
+        if (respuesta==3):
+            definir_saldo()
+            seguir=True
+        if (respuesta==4):
+            print("Acabamos, gracias y hasta la proxima")
+            seguir=False
