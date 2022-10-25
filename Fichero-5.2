@@ -16,7 +16,7 @@ def sacar_dinero():
         else:
             if(accion==2):
                 extraer=int(input("Cuanto deseas extraer "))
-                if(extraer%5==0)&(extraer<saldo):
+                if(extraer%5==0)&(extraer<=saldo):
                     saldo=saldo-extraer
                     print("Su saldo es de "+str(saldo))
                 else:
