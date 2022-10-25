@@ -1,0 +1,34 @@
+def sacar_dinero():
+    saldo=0
+    print("*******************************************************")
+    print("                       *MENU*                         ")
+    print("*******************************************************")
+    print("Ingresar - 1")
+    print("Extraer - 2")
+    print("Saldo - 3")
+    print("Salir - 4")
+    while (saldo>=0):
+        accion=int(input("Que accion deseas realizar "))
+        if(accion==1):
+            ingreso=int(input("Cunato deseas ingresar: "))
+            saldo=saldo+ingreso
+            print("Su saldo es de "+str(saldo))
+        else:
+            if(accion==2):
+                extraer=int(input("Cuanto deseas extraer "))
+                if(extraer%5==0)&(extraer<saldo):
+                    saldo=saldo-extraer
+                    print("Su saldo es de "+str(saldo))
+                else:
+                    print("No se puede realizar esta accion")
+            else:
+                if(accion==3):
+                    print("Su saldo es de "+str(saldo))
+                else:
+                    if(accion==4):
+                        print("Acabamos, gracias y hasta la proxima")
+                        break
+                    else:
+                        print("Esta accion no se puede realizar")
+
+sacar_dinero()
