@@ -7,7 +7,13 @@ def numeros(caracter):
     return(respuesta)
 
 def deletreo():
-    contraseña=input("Dime una contraseña ")
+    print("***********************************************************")
+    print("                       *Condiciones*                   ")
+    print("             - Tener al menos 8 caracteres             ")
+    print("             - Contener letras y numeros               ")
+    print("             - Contener al menos un caracter especial  ")
+    print("***********************************************************")
+    contraseña=input("- Dime una contraseña: ")
     cuentanumeros=0
     cuentaletras=0
     for cont in range(0,len(contraseña)):
@@ -21,7 +27,11 @@ def deletreo():
     print("Tiene "+ str(cuentaletras)+ " letras ")
     
     if(cuentanumeros>0 and cuentaletras>0 and cuentaletras+cuentanumeros>=8):
-        print("La contraseña es apta")
+        especiales=contraseña.isalnum()
+        if(especiales==False):
+            print("La contraseña es valida")
+        else:
+            print("La contraseña no es valida")
     else:
         print("La contraseña no es valida")
     
