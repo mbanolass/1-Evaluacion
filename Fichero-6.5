@@ -1,0 +1,22 @@
+# Calculo de al nota de acceso Evau
+def introduccion():
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("  Enumera tus opciones principales de carrera en orden")
+    carrera1=((input("    1ª - ")))
+    carrera1=((input("    2ª - ")))
+    carrera1=((input("    3ª - ")))
+    print("  Introduce las notas de las siguientes materias obligatorias en la Evau sin decimales")
+    ingles=((int(input("    Ingles - "))))
+    lengua=((int(input("    Lengua - "))))
+    historia=((int(input("    Historia - "))))
+    matematicas=((int(input("    Matematicas - "))))
+    notaobligatoria=((ingles+lengua+historia+matematicas)/4)
+    continuar=True
+    while(continuar==True):
+        print("Tu nota es suficiente para mediar")
+        print(notaobligatoria)
+        if(notaobligatoria<=4):
+            continuar=False
+    
+        
+introduccion()
